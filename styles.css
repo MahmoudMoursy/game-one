@@ -207,9 +207,6 @@ h1 {
 
 /* responsiveness */
 @media (max-width: 1024px) {
-    *{
-        transform: rotate(90deg);
-    }
     body {
         font-size: 1.8vw;
         
@@ -291,9 +288,7 @@ h1 {
     }
 }
 @media (max-width: 920px){
-    *{
-        transform: rotate(90deg);
-    }
+    
     body {
         width: 260vh;
         background-repeat: no-repeat;
