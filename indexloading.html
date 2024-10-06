@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Loading Screen</title>
+    
+    <style>
+        
+        .container {
+            display: none; /* إخفاء المحتوى الرئيسي عند التحميل */
+        }
+    
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #111; */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-image: url("https://img.freepik.com/premium-photo/3d-render-abstract-background-flat-plane-simple-geometry-shapes-front-it-round-square-triangle-hexagon-primitives-with-blurred-shadow_363039-1786.jpg?w=996");
+    background-size: cover;
+}
+
+.loading-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.loading-bar {
+    width: 400px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    border-radius: 15px;
+    transition: width 0.2s ease;
+}
+
+.loading-text {
+    font-size: 1.5em;
+}
+    </style>
+</head>
+<body>
+
+    <div class="loading-container">
+        <img src="logo.webp" width="30%" alt="">
+        <h1>Loading Game...</h1>
+        <div class="loading-bar" style="margin-left:35% ;">
+            <div class="progress"></div>
+        </div>
+        <div class="loading-text" id="loading-text">0%</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        setTimeout(function() {
+            // إظهار المحتوى الرئيسي من الصفحة الرئيسية
+            window.parent.document.getElementById('loading-container').style.display = 'none';
+            var mainContent = window.parent.document.getElementsByClassName('container');
+            if (mainContent.length > 0) {
+                mainContent[0].style.display = 'block'; // إظهار المحتوى الرئيسي
+            }
+        }, 3000); // الزمن المطلوب للتحميل (3000 ملي ثانية)
+    </script>
+</body>
+</html>
