@@ -306,9 +306,7 @@ h1 {
     
     }}
 @media (max-width: 844px) {
-    *{
-        transform: rotate(90deg);
-    }
+    
     body {
         width: 260vh;
         background-repeat: no-repeat;
